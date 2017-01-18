@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>360商城</title>
+	</head>
+	<link rel="stylesheet" href="css/common.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<script type="text/javascript" src="js/Ajax.js" ></script>
+	<script type="text/javascript" src="js/jquery.js" ></script>
+	<script type="text/javascript" src="js/index.js" ></script>
+	<script type="text/javascript" src="js/login.js" ></script>
+	<!--<script type="text/javascript" src="js/regist.js" ></script>-->
+	<body>
+		<!--头部导航-->
+		<div class="headerone">
+			<div class="header">
+				<!--左边-->
+				<div class="hleft">
+					<ul>
+						<li><a href="#" target="_blank">大客户采购</a></li>
+						<li><a href="#" target="_blank">帮助中心</a></li>
+						<li><a href="#" target="_blank">收藏本站</a></li>
+						<li><a href="#" target="_blank">商品入住</a></li>
+						<li><a href="#" target="_blank">老人手环申请</a></li>
+						<li><a href="#" target="_blank"><img src="img/ihone_2017-01-09T12-16-46_03.gif"/>360手机商城</a></li>
+					</ul>
+				</div>
+				<!--右边-->
+				<div class="hright">
+					<ul>
+						<li id="login111"><a>登录</a></li>
+						<li id="user"><a>注册</a></li>
+						<li><a href="#" target="_blank">|</a></li>
+						<li><a href="#" target="_blank">F码购买</a></li>
+						<li><a href="#" target="_blank">我的订单</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--<div id="dlone">-->
+			<div id="dl">
+				
+				<div id="dltop">
+					<img id="dltoppic" src="img/login20170112181932_06.png" />
+					<div id="ptdl"><a href="#">普通登录</a></div>
+					<div id="dxdl"><a href="#">短信登录</a></div>
+					<div id="chexiao12">x</div>
+				</div>
+				<!--	/*普通登录*/-->
+				<div id="dlbootom">
+					<br />
+					<font id="tishi"></font>
+					<span>帐&nbsp;号</span><input id="user" type="text" placeholder="手机号/用户名/邮箱"/>
+					<span>密&nbsp;码</span><input id="pwd" type="password" placeholder="请输入您的密码"/>
+					<input id="radio" type="radio" /><span class="zidong">下次自动登录</span>
+					<input id="dengl" type="button" value="立即登录	"/>
+					<div id="qizh">其他账号登录:</div>
+					
+					<div id="tpc">
+						<span><img src="img/login20170112181932_14.png"/></span>
+						<span><img src="img/login20170112181932_11.png"/></span>
+						<span><img src="img/login20170112181932_17.png"/></span>
+					</div>
+					
+					<img src="img/tiao_03.png" />
+					
+					<div id="xin">
+					<span><a href="#">注册新账号</a></span>
+					<span>|</span>
+					<span><a href="#">忘记密码？</a></span>
+					</div>
+				</div>
+			
+			<!--短信登陆-->	
+				<div id="dlbootom1">
+					<span class="dxdl1">手机号</span><input id="yhm" type="text" placeholder="请输入您的手机号"/>
+					<br />
+						<br />
+					<div id="adsd" >
+						<span class="dxdl1">验证码</span>
+						<input id="yhm1" type="text" placeholder="请输入验证码"/>
+							<span id="yzm" class="code"></span>
+							<!--<span id="yzm" ></span>-->
+							<span id="hyz"  onclick="createCode()">换一张</span>
+					</div>
+					<br />
+					<span class="dxdl1">校验码</span><input id="yhm2" type="text" placeholder="手短信验证码"/><input id="yhm3" type="button" value="免费获取验证吗"/>
+					<br />
+					<input id="radio" type="radio" /><span class="zidong">下次自动登录</span>
+					<br />
+					<input id="denglu" type="button" value="立即登录	"/>
+	
+					<img src="img/tiao_03.png" />
+					<div id="xin">
+						<span><a href="#">注册新账号</a></span>
+						<span>|</span>
+						<span ><a href="#">检验码常见问题</a></span>
+					</div>
+				</div>
+			</div>			
+		<!--</div>-->
+			
+		<!--nav-->
+
+	<!--注册-->	
+	<div id="zc">
+		<div id="zctop">
+			<img id="dltoppic" src="img/login20170112181932_06.png" />
+			<span>欢迎注册360帐号</span>
+			<div id="chexiaoa">x</div>
+		</div>
+
+		<div id="zcbottom">
+			<div id="zclef">
+				<div id="sjzc">
+					<img src="img/sjz_03.png"/>
+					<span>手机注册</span>
+				</div>
+				<div id="yxzc">
+					<div id="waicen">
+						<img src="img/sjz_07.png" />
+						<span>邮箱注册</span>
+					</div>
+				</div>
+				<div id="zcljdl">
+					<div>已有帐号,<span>立即登录</span></div>
+				</div>
+			</div>
+			<!--手机注册-->
+			<div id="phonezcright">
+				<span class="dxdl1">手机号</span><input id="yhm"  type="text" />
+				<p>请输入您的手机号</p>
+				<div id="phoneyzm" >
+					<span class="dxdl1">验证码</span>
+					<input id="yhm1" type="text" placeholder="请输入验证码"/>
+						<font id="yzm1" class="code"></font>
+						<!--<span id="yzm" ></span>-->
+						<font id="hyz1" onclick="createCode()" >换一张</font>
+						<p>请输入图中的字母或数字，不区分大小写</p>
+				</div>
+				<span class="dxdl1">校验码</span><input id="yhm2" type="text" placeholder="手短信验证码"/><input id="yhm3" type="button" value="免费获取验证吗"/>
+					<p>请输入短信中6位数字校验码<span>检验码常见问题</span></p>
+				<span class="dxdl1">用户名</span><input id="userAccount" class="up" type="text" />
+					<p>2-14个字符：英文、数字或中文</p>
+				<span class="dxdl1" id="pht1">密码</span><input class="up" id="pwd1" type="text" />
+					<p>6-20个字符（不区分大小写）</p>
+				<span class="dxdl1" id="pht2">确认密码</span><input class="up" id="pwd2" type="text" />
+					<p>请在此输入密码</p>
+				<input id="denglu1" type="button" value="立即登录"/>
+				<input id="radio" type="radio" /><span id="lan">我已阅读并同意<span>《360用户服务条款》</span></span>
+			</div>
+		</div>
+	</div>
+	
+	<!--邮箱注册-->
+	<div id="zc1">
+		<div id="zctop1">
+			<img id="dltoppic1" src="img/login20170112181932_06.png" />
+			<span>欢迎注册360帐号</span>
+			<div id="chexiao1">x</div>
+		</div>
+
+		<div id="zcbottom1">
+			<div id="zclef1">
+				<div id="sjzc1">
+					<img src="img/sjz_03.png"/>
+					<span>手机注册</span>
+				</div>
+				<div id="yxzc1">
+					<div id="waicen1">
+						<img src="img/sjz_07.png" />
+						<span>邮箱注册</span>
+					</div>
+				</div>
+				<div id="zcljdl1">
+					<div>已有帐号,<span>立即登录</span></div>
+				</div>
+			</div>
+		<!--邮箱注册-->
+			<div id="mailzcright1">
+				<span class="dxdl11">邮箱</span><input id="yhm1" type="text" />
+				<p>请输入您的常用邮箱，<span>没有邮箱？</span></p>
+				<span class="dxdl11">用户名</span><input class="up1" type="text" />
+					<p>2-14个字符：英文、数字或中文</p>
+				<span class="dxdl11" id="pht11">密码</span><input class="up1" id="pwd11" type="text" />
+					<p>6-20个字符（不区分大小写）</p>
+				<span class="dxdl11" id="pht12">确认密码</span><input class="up1" id="pwd12" type="text" />
+					<p>请在此输入密码</p>
+				<div id="phoneyzm1" >
+					<span class="dxdl11">验证码</span>
+					<input id="yhm11" type="text" placeholder="请输入验证码"/>
+						<font id="yzm11" class="code"></font>
+						<!--<span id="yzm" ></span>-->
+						<font id="hyz11" onclick="createCode()" >换一张</font>
+				</div>
+				<p>请输入图中的字母或数字，不区分大小写</p>
+				<input id="denglu11" type="button" value="立即登录"/>
+				<input id="radio1" type="radio" /><span id="lan1">我已阅读并同意<span>《360用户服务条款》</span></span>
+			</div>
+			
+		</div>
+		
+	</div>
+
+ <!-- 导航菜单 -->
+<div id="content">
+	<div id="nabsb">
+		<!--nav-->
+		<!--<div class="navone">-->
+			<div class="nav">
+				<div id="nantop">
+					<!--360图标-->
+					<div><a href="#" ><img id="tbpic" alt="360商城" src="img/t013cfce5d46cdb1b5f.png"/></a></div>
+					<!--搜索-->
+					<div id="search">
+						<input type="text" class="search" id="sousuo"  />
+						<a href="#" id="scolor"><img id="searchpic" src="img/search_03.png" /></a>	
+						<div id="remen">
+							<span><a href="#">360手机N4A</a></span>
+							<span><a href="#">360儿童手表5c</a></span>
+							<span><a href="#">360儿童机器人</a></span>
+							<span><a href="#">年货大抢购</a></span>
+							<span><a href="#">360安全路由5G</a></span>
+						</div>
+					</div>
+						<!--购物车-->
+					<div class="gouwuche" id="gouwuche">
+						<a id="gwc" href="#"><img  src="img/gwc_09T12-16-46_03.png"/></a>
+						<p id="wdgwc"><a href="#">我的购物车<span>(0)</span></a></p>
+						
+					</div>
+				<div class="content1" id="content1"></div>
+				</div>
+				<!--下面的导航菜单-->
+				<div id="xdh">
+					<ul>
+						<li><a href="#" target="_blank">手机</a>
+							<div class="Phone3" id="Phone1"></div>
+					
+						</li>
+						<li><a href="#" target="_blank">行车记录仪</a>
+							<div id="Phone2" class="Phone3"></div>
+						</li>
+						<li><a href="#" target="_blank">儿童手表</a>
+							<div class="Phone3" id="Phone3"></div>
+						
+						</li>
+						<li><a href="#" target="_blank">摄像机</a>
+							<div class="Phone3" id="Phone4"></div>
+						</li>
+						<li><a href="#" target="_blank">路由器</a>
+							<div class="Phone3" id="Phone5"></div>
+						</li>
+						<li><a href="#" target="_blank">儿童机器人</a>
+							<div class="Phone3" id="Phone6"></div>
+						</li>
+						<li><a href="#" target="_blank">老人手表</a>
+							<div class="Phone3" id="Phone7"></div>
+						</li>
+						<li><a href="#" target="_blank">智能品牌</a>
+							<div class="Phone3" id="Phone8"></div>
+						</li>
+						<li><a href="#" target="_blank">社区</a>
+							<div class="Phone3" id="Phone9"></div>
+						</li>
+					</ul>
+					
+					<div id="xdhbottom">
+						
+					</div>
+				</div>
+				
+			</div>
+		<!--</div>-->
+	
+<!--	//轮播图-->
+<div id="sliderone">
+	<div class="slider"> 
+		<ul class="slider-main"> 
+			<li class="slider-panel"> 
+				<a href="#" target="_blank"><img src="img/t012baffeaf4aedc99c (1).webp" /></a> 
+			</li> 
+			<li class="slider-panel"> 
+				<a href="#" target="_blank"><img src="img/t015b545c30c40823fb.webp" /></a> 
+			</li> 
+			<li class="slider-panel"> 
+				<a href="#" target="_blank"><img src="img/t01eeb21a1648f7979f.webp" /></a> 
+			</li> 
+			<li class="slider-panel"> 
+				<a href="#" target="_blank"><img src="img/t012baffeaf4aedc99c (1).webp" /></a> 
+			</li> 
+			<li class="slider-panel"> 
+				<a href="#" target="_blank"><img src="img/t015b545c30c40823fb.webp" /></a> 
+			</li> 
+			<li class="slider-panel"> 
+				<a href="#" target="_blank"><img src="img/t01eeb21a1648f7979f.webp" /></a> 
+			</li> 
+		</ul> 
+		<div class="slider-extra"> 
+			<ul class="slider-nav"> 
+				<li class="slider-item"></li> 
+				<li class="slider-item"></li> 
+				<li class="slider-item"></li> 
+				<li class="slider-item"></li> 
+				<li class="slider-item"></li> 
+				<li class="slider-item"></li> 
+			</ul> 
+			<div class="slider-page"> 
+				<a class="slider-pre" href="javascript:;;"><</a> 
+				<a class="slider-next" href="javascript:;;">></a> 
+			</div> 
+		</div> 
+	</div> 
+</div>	
+	
+<!--菜单列表-->
+<div id="menuone">
+	<dl>
+		<dd id="mtop"><img src="img/mtop_03.png"/><span>全部智能酷品</span>
+			
+		</dd>
+		<dt id="phone1">手机
+			<div id="mleft1" class="mleft"></div>
+		</dt>
+		<dt id="clothing1">智能穿戴
+			<div id="mleft2" class="mleft"></div>
+		</dt>
+		<dt id="smarthome1">智能家居
+			<div id="mleft3" class="mleft"></div>
+		</dt>
+		<dt id="IntelligentVehicleProduct1">智能车品
+			<div id="mleft4" class="mleft"></div>
+		</dt>
+		<dt id="Entertainment1">影音娱乐
+			<div id="mleft5" class="mleft"></div>
+		</dt>
+		<dt id="computer1">电脑/娱乐
+			<div id="mleft6" class="mleft"></div>
+		</dt>
+		<dt id="UAV1">无人机/机器人
+			<div id="mleft7" class="mleft"></div>
+		</dt>
+		<dt id="Baby1">母婴玩具
+			<div id="mleft8" class="mleft"></div>
+		</dt>
+	</dl>
+	<div id="mleft">
+		
+	</div>
+</div>
+
+
+
+
+	
+	
+</div>
+
+
+	
+	
+<!-- 导航小广告 -->
+ <div id="menu">
+  	<ul>
+	   <li>1F<span>&nbsp;1F活动</span></li>
+	   <li>2F<span>&nbsp;2F手机</span></li>
+	   <li>3F<span>&nbsp;3F配件</span></li>
+	   <li>4F<span>&nbsp;4F穿戴</span></li>
+	   <li>5F<span>&nbsp;5F家居</span></li>
+	   <li>6F<span>&nbsp;6F车品</span></li>
+	   <li>7F<span>&nbsp;7F影音</span></li>
+	   <li>8F<span>&nbsp;8F电脑</span></li>
+	   <li>9F<span>&nbsp;9F母婴</span></li>
+	   <li>10F<span>&nbsp;10F新品</span></li>
+  	</ul>
+ </div>
+	
+  <div class="louti" id="louti1" >
+  	<div id="floorone">
+  		
+  	</div>
+  	
+  	<div id="part-container">
+	<span></span>
+	<img src="img/t01afc23de9cb80bf31.png" />
+	<span>热门活动</span>
+	<img src="img/t01afc23de9cb80bf31.png" />
+	<span></span>
+	</div>
+  	
+  </div>
+  
+  <div class="louti" id="louti2" style="background:yellow">louti2</div>
+  <div class="louti" id="louti3" style="background:red">louti3</div>
+  <div class="louti" id="louti4" style="background:orange">louti4</div>
+  <div class="louti" id="louti5" style="background:#f0f0f0">louti5</div>
+  <div class="louti" id="louti6" style="background:orchid">louti6</div>
+  <div class="louti" id="louti7" style="background:#ff0">louti7</div>
+  <div class="louti" id="louti8" style="background:red">louti8</div>
+  <div class="louti" id="louti9" style="background:yellow">louti9</div>
+  <div class="louti" id="louti10" style="background:red">louti10</div>
+  <div class="louti" id="louti11" style="background:yellow">louti11</div>
+ </div>
+ <!-- 产品内容 -->
+ <!-- 底部 -->
+ <div id="footer" class="container"></div>
+	</body>
+</html>
